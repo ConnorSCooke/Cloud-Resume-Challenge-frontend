@@ -1,95 +1,404 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connor Cooke - Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Connor Cooke's Cloud Resume</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
 </head>
-<body>
-    <div class="resume-container">
 
-    <header> 
-        <h1>Connor Cooke</h1>
-        <p class = "contact-info">
-            <a href="mailto:ccooke@connorcooke.com">ccooke@connorcooke.com</a>
-            <a href="https://linkedin.com/in/connor-cooke" target="blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href = "https://github.com/ConnorSCooke" target="_blank" rel="noopener noreferrer">GitHub</a>
-            Dallas, TX
-        </p>
-    </header>
+<body id="top" class="ss-preload">
 
-    <main>
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Experienced IT professional with 3.5+ years of progressive responsibility in network and systems administration, currently serving as a Senior System Administrator. Proven ability to design, implement, and automate infrastructure solutions across Windows, Linux, and cloud environments. Adept in scripting with PowerShell, deploying scalable logging solutions (ELK Stack), and managing Microsoft 365 for over 150 users. Holds multiple industry certifications including Azure Administrator Associate (AZ-104) and AWS Cloud Practitioner. Seeking to transition into an Infrastructure Engineer role to drive automation, cloud adoption, and operational excellence.</p>
-        </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <article>
-                <h3>Senior System Administrator</h3>
-                <p class="company-info">Dickey's Barbecue Restaurants, Inc. | Dallas, TX | April, 2024 &ndash; Present </p>
-                <ul> 
-                    <li>Directed the planning and execution of large-scale infrastructure projects, coordinating with cross-functional teams to ensure on-time and on-budget delivery.</li>
-                    <li>Managed and maintained a fleet of 20+ Windows and Linux Servers (including versions 2016, 2019, 2022), ensuring 99.9% uptime for critical business applications.</li>
-                    <li>Engineered and deployed a scalable, self-hosted ELK Stack on a dedicated Debian VM to centralize and analyze logs from over 20+ Windows and Linux servers in real-time.</li>
-                </ul>
-            </article>
-            <article>
-                <h3>System Administrator</h3>
-                <p class="company-info">Dickey's Barbecue Restaurants, Inc. | Dallas, TX | May, 2023 &ndash; April, 2024</p>
-                <ul>
-                    <li>Served as the lead administrator for the Microsoft 365 environment for 150 users, managing user licensing, mailboxes, and distribution lists in the Exchange Admin Center.</li>
-                    <li>Streamlined the onboarding process by developing a PowerShell script to automate account creation and group assignments, reducing the time required per user by 75%.</li>
-                    <li>Maintained the integrity and reliability of Active Directory by performing regular health checks, managing Group Policy Objects (GPOs), and ensuring proper replication.</li>
-                </ul>
-            </article>
-            
-            <article>
-                <h3>Network Administrator</h3>
-                <p class="company-info">Sagiss, LLC | Irving, TX | February, 2022 &ndash; April, 2024</p>
-                <ul>
-                    <li>Efficiently managed the network infrastructure of eight clients, including switches, firewalls, and servers, while maintaining a high level of customer satisfaction.</li>
-                    <li>Managed the cloud infrastructure for clients using Azure and Office365, ensuring smooth operation and minimal downtime.</li>
-                    <li>Created and updated IT documentation, including policies, procedures, and user manuals, to ensure clear and concise guidance on processes and procedures for the team, resulting in increased efficiency and reduced downtime.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <p class="institution-info">University of Arkansas | Fayetteville, AR | May, 2020</p>
-            <ul>
-                <li>Bachelor of Science, Information Systems</li>
-            </ul>
-        </section>
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li>
-                    <strong>Microsoft Certified: Azure Administrator Associate (AZ-104)</strong><br>Microsoft | March, 2025
-                </li>
-                <li>
-                    <strong>AWS Certified Cloud Practitioner</strong><br>Amazon Web Services | March, 2024
-                </li>
-                <li>
-                    <strong>CompTIA Security+</strong><br>CompTIA | April, 2023
-                </li>
-                <li>
-                    <strong>CompTIA Network+</strong><br>CompTIA | January, 2023
-                </li>
-                <li>
-                    <strong>CompTIA A+</strong><br>CompTIA | January, 2022
-                </li>
-            </ul>
-        </section>
-    </main>
-
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader"></div>
     </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <div class="row s-header__nav-wrap">
+            <nav class="s-header__nav">
+                <ul>
+                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
+                    <li><a class="smoothscroll" href="#about">About</a></li>
+                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
+                </ul>
+            </nav>
+        </div> <!-- end row -->
+
+        <a class="s-header__menu-toggle" href="#0" title="Menu">
+            <span class="s-header__menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <div class="s-hero__content-about">
+
+                    <h1>Hi, I'm Connor Cooke.</h1>
+
+                    <h3>
+                        I'm a Dallas based <span>Systems and Network Administrator</span> and
+                        <span>Cloud Enthusiast.</span> My expertise lies in architecting and maintaining scalable
+                        network
+                        and system infrastructure, with a keen focus on cloud-native solutions that enhance operational
+                        excellence. <a class="smoothscroll" href="#about"> Start scrolling</a>
+                        and learn more <a class="smoothscroll" href="#about">about me</a>.
+                    </h3>
+
+                    <div class="s-hero__content-social">
+                        <a href="https://linkedin.com/in/connor-cooke"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a>
+                        <a href="https://github.com/ConnorSCooke"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="visitor-count-container">
+                        Visitor Count: <span id="visitor-count">Loading...</span>
+                    </div>
+
+                </div> <!-- end s-hero__content-about -->
+
+            </div>
+        </div> <!-- s-hero__content -->
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                <span class="scroll-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                        <path
+                            d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div> <!-- s-hero__scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row">
+            <div class="column large-3 tab-12">
+                <img class="s-about__pic" src="images/avatars/headshot.jpeg" alt="">
+            </div>
+            <div class="column large-9 tab-12 s-about__content">
+                <h3>About Me</h3>
+                <p>
+                    Hi, I'm Connor Cooke, a Senior Systems and Network Administrator at Dickey's Barbecue Restaurants,
+                    Inc. I manage our on-premises and cloud systems, and I enjoy using cloud tools to automate tasks and
+                    improve efficiency. This page was created for the Cloud Guru Azure Resume Challenge.
+                </p>
+
+                <hr>
+
+                <div class="row s-about__content-bottom">
+                    <div class="column w-1000-stack">
+                        <h3>Contact Details</h3>
+
+                        <p>
+                            Connor Cooke <br>
+                            Dallas, TX <br>
+                            <a href="mailto:ccooke@connorcooke.com">ccooke@connorcooke.com</a>
+                        </p>
+
+                    </div>
+                    <div class="column large-12">
+                        <a href="mailto:ccooke@connorcooke.com" class="mailtoui btn btn--primary h-full-width">Contact
+                            Me</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end row -->
+
+    </section> <!-- end s-about -->
+
+    <!-- certificatons
+    ================================================== -->
+    <section id="resume" class="s-resume target-section">
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Certifications</h3>
+            </div>
+            <div class="column large-9 tab-12">
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Microsoft Certified: Azure Administrator Associate (AZ-104)</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Microsoft</span>
+                            <span class="resume-block__header-date">
+                                March 2025
+                            </span>
+                        </p>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">AWS Certified: Cloud Practitioner</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Amazon Web Services</span>
+                            <span class="resume-block__header-date">
+                                March 2024
+                            </span>
+                        </p>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">CompTIA Security+</h4>
+                        <p class="resume-block__header-meta">
+                            <span>CompTIA</span>
+                            <span class="resume-block__header-date">
+                                April 2023
+                            </span>
+                        </p>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">CompTIA Network+</h4>
+                        <p class="resume-block__header-meta">
+                            <span>CompTIA</span>
+                            <span class="resume-block__header-date">
+                                January 2023
+                            </span>
+                        </p>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+
+                <div class="resume-block">
+
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">CompTIA A+</h4>
+                        <p class="resume-block__header-meta">
+                            <span>CompTIA</span>
+                            <span class="resume-block__header-date">
+                                January 2022
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- resume
+    ================================================== -->
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Career</h3>
+            </div>
+            <div class="column large-9 tab-12">
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Dickey's Barbecue Restaurants, Inc.</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Senior Network and Systems Administrator</span>
+                            <span class="resume-block__header-date">
+                                March 2024 - Present
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Dickey's Barbecue Restaurants, Inc.</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Network and Systems Administrator</span>
+                            <span class="resume-block__header-date">
+                                May 2023 - March 2024
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Sagiss, LLC</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Network Administrator</span>
+                            <span class="resume-block__header-date">
+                                February 2022 - May 2023
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Cooke Real Estate Group</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Information Technology Specialist</span>
+                            <span class="resume-block__header-date">
+                                May 2020 - February 2022
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Federal Reserve Bank of Dallas</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Intern - Operations Data Analytics</span>
+                            <span class="resume-block__header-date">
+                                June 2019 - August 2019
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Education</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">University of Arkansas</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Bachelor of Science in Information Systems</span>
+                            <span class="resume-block__header-date">
+                                May 2020
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                    </p>
+
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+    </section> <!-- end s-resume -->
+
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
+                <ul class="s-footer__social">
+                    <li><a href="#0"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
+                <span>© Copyright Ceevee 2021</span>
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z" />
+                </svg>
+            </a>
+        </div> <!-- end ss-go-top -->
+    </footer>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/visitorCounter.js"></script>
+
 </body>
+
 </html>
